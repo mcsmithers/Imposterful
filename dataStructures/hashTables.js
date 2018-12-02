@@ -37,3 +37,18 @@ const hash = new HashTable();
 hash.add(1);
 hash.add(2);
 console.log(hash.contains(2));
+
+// // Finding duplicates in an array is a popular interview question
+const duplicateDays = function (daysRequested) {
+    const hash = new HashTable();
+    for (let day of daysRequested) {
+        if (hash.contains(day)) {
+            return day;
+        } else {
+            hash.add(day);
+        }
+    }
+    return 0;
+}
+const daysOff = [1, 2, 3, 3, 4, 5];
+console.log(duplicateDays(daysOff));

@@ -49,12 +49,12 @@ class LinkedList {
     // // Remove element anywhere in list - This is a very popular question
     remove(node) {
         // Check if this particular node is the head
-        if(this.head.value === node.value){
-            this.head = this.head.nezt;
-        }else{
+        if (this.head.value === node.value) {
+            this.head = this.head.next;
+        } else {
             // Traverse until you find the node
             this.traverse((n, last) => {
-                if(n.value === node.value){
+                if (n.value === node.value) {
                     // Use the last node to reset next
                     last.next = n.next;
                 }
